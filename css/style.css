@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;700&display=swap');
+body{
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F6E4FF;
+  font-family: 'Montserrat Alternates', sans-serif;
+  padding: 32px 16px;
+  font-size: 10px;
+}
+
+.game-box{
+  max-width: 500px;
+  padding: 24px 16px 42px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px #AD00FF;
+  border-radius: 15px;
+  animation: game-shadow 10s infinite linear alternate-reverse;
+}
+@keyframes game-shadow {
+  0%{
+    box-shadow: 0px 0px 20px #AD00FF;
+  }
+  20%{
+    box-shadow: 0px 0px 20px #ff00ff;
+  }
+  40%{
+    box-shadow: 0px 0px 20px #1100ff;
+  }
+  60%{
+    box-shadow: 0px 0px 20px #00eeff;
+  }
+  80%{
+    box-shadow: 0px 0px 20px #ff00ff;
+  }
+  100%{
+    box-shadow: 0px 0px 20px #AD00FF;
+  }
+}
+h1{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #520377;
+  margin-bottom: 12px;
+}
+@media (max-width: 532px){
+  h1{
+    font-size:7vw;
+    line-height: 140%;
+  }
+}
+.lvl-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+p{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #520377;
+}
+select{
+  flex-grow: 1;
+  min-width: 226px;
+  height: 56px;
+  border: 1px solid #520377;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #520377;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+option{
+  border-radius: 5px;
+}
+.text-task{
+  margin-bottom: 22px;
+}
+.test, .statistic{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  position: relative;
+  transition: 0.4s;
+}
+.statistic{
+  margin-bottom: 0;
+}
+.test button{
+  height: 56px;
+  width: 40%;
+  min-width: 226px;
+  background: #F7E4FF;
+  border: 1px solid #520377;
+  border-radius: 8px;
+  flex-grow: 1;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #520377;
+}
+.statistic button{
+  border: 1px solid #520377;
+  border-radius: 8px;
+  height: 56px;
+  width: 40%;
+  min-width: 226px;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  flex-grow: 1;
+}
+.statistic-show{
+  background-color: white;
+  color: #520377;
+}
+.statistic-reset{
+  background-color: #520377;
+  color: white;
+}
+hr{
+  width: 80%;
+  margin: auto;
+  height: 1px;
+  background-color: #520377;
+  margin-bottom: 16px;
+}
+button{
+  transition: all 0.4s;
+}
+@media (min-width: 768px) {
+  button:hover, select:hover, .test-box input:hover{
+    box-shadow: 0 0 8px #520377;
+  }
+  button:active{
+    transform: scale(0.95);
+    box-shadow: 0 0 4px #520377;
+    transition: all 0.05s;
+  }
+  select:focus, .test-box input:focus{
+    box-shadow: 0 0 8px #520377;
+  }
+}
+.statistic-box, .test-box{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #F6E4FF;
+  border-radius: 4px;
+  box-shadow: inset 0 0 8px #520377;
+  visibility: hidden;
+  opacity: 0;
+  padding: 8px;
+}
+.test-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: default !important;
+  padding: 8px;
+}
+
+.test-text{
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #520377;
+  flex-grow: 1;
+  gap: 8px;
+  width: 45%;
+}
+.test-box input{
+  width: 45%;
+  height: 40%;
+  min-width: 226px;
+  height: 40%;
+  max-height: 56px;
+  border: 1px solid #520377;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #520377;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: all 0.4s;
+  flex-grow: 1;
+}
+.test-box input::placeholder{
+  font-size: 16px;
+  font-weight: normal;
+}
+.test-box button{
+  width: 55%;
+  flex-grow: 0;
+  margin: 0 auto;
+  height: 40%;
+  max-height: 56px;
+  background-color: #520377;
+  color: #FFFFFF;
+}
+/* js */
+._zero{
+  transform: scale(0);
+  opacity: 0;
+}
+.box_active{
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+.check_ok{
+  background-color: rgb(32, 204, 32);
+  transition: all 0.5s;
+}
+.check_error{
+  background-color: rgb(214, 26, 26);
+  transition: all 0.5s;
+}
+.check_ok > *, .check_error > *{
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  width: 0;
+  height: 0;
+}
+.check_ok span, .check_error span{
+  visibility: visible;
+  opacity: 0;
+  width: 100%;
+  line-height: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  transform: scale(1) translateY(-50%);
+  color: white;
+  padding: 0 8px;
+  transition: all 0.3s;
+}
